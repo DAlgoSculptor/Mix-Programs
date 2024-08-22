@@ -1,0 +1,100 @@
+/* Reset default styles for all elements */
+* {
+    border: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Define custom CSS variables (variables are declared in :root) */
+  :root {
+    --hue: 223;
+    --goldHue: 45;
+    --goldSat: 40%;
+    --bg: hsl(var(--hue), 10%, 90%);
+    --fg: hsl(var(--hue), 10%, 10%);
+    --primary: hsl(var(--hue), 90%, 50%);
+    --trans-dur: 0.3s;
+    font-size: calc(16px + (32 - 16) * (100vw - 320px) / (2560 - 320));
+  }
+  
+  /* Apply styles to the body element */
+  body {
+    background-color: var(--bg);
+    color: var(--fg);
+    display: flex;
+    font: 1em/1.5 "Lobster Two", serif;
+    height: 100vh;
+    transition:
+      background-color var(--trans-dur),
+      color var(--trans-dur);
+  }
+  
+  /* Styles for the clock element */
+  .clock {
+    margin: auto;
+    position: relative;
+    width: 16em;
+    height: 16em;
+  
+    /* Nested elements */
+    &__frames,
+    &__frame,
+    &__frame-cracks,
+    &__frame-crack,
+    &__hands,
+    &__hand,
+    &__hour,
+    &__hub,
+    &__inside,
+    &__inside:before,
+    &__inside:after,
+    &__tick {
+      position: absolute;
+    }
+  
+    /* Add a drop shadow to frames and hands */
+    &__frames,
+    &__hands {
+      filter: drop-shadow(0 0.25em 0.125em hsla(0, 0%, 0%, 0.7));
+    }
+  
+    /* Styles for the clock frame */
+    &__frame {
+      background: url("https://assets.codepen.io/416221/wooden_clock_frame.jpg") 0 0 / 100% 100%, hsl(27, 58%, 32%);
+      bottom: 50%;
+      clip-path: polygon(0 0, 100% 0, 94% 100%, 6% 100%);
+      left: calc(50% - 3.35em);
+      width: 6.7em;
+      height: 1em;
+      transform-origin: 50% 100%;
+  
+      /* Apply rotation to create multiple frames */
+      @for $f from 1 through 8 {
+        &:nth-child(#{$f}) {
+          transform: rotate(45deg * $f) translateY(-7em);
+        }
+      }
+  
+      /* Styles for frame cracks */
+      &-crack {
+        background-color: hsla(0, 0%, 0%, 0.7);
+        border-radius: 0.05em;
+        bottom: 50%;
+        left: calc(50% - 0.05em);
+        width: 0.1em;
+        height: 1em;
+        transform-origin: 50% 100%;
+  
+        @for $c from 1 through 8 {
+          &:nth-child(#{$c}) {
+            transform: rotate(45deg * $c + 22.5) translateY(-7.6em);
+          }
+        }
+      }
+    }
+  
+    /* More styles for clock hands, hour markers, hub, inside, and ticks go here */
+    /* ... */
+  }
+  

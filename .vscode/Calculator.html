@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="cal.css">
+    <script src="cal.js"></script>
+
+    <title>Calculator</title>
+</head>
+
+<body>
+    <h1 class="center">Calculator</h1>
+    <table class="center">
+        <tr>
+            <td colspan="6"><input id="display"></td>
+        </tr>
+        <tr>
+            <td><button onclick="addToDisplay(7)" class="num">7</button></td>
+            <td><button onclick="addToDisplay(8)" class="num">8</button></td>
+            <td><button onclick="addToDisplay(9)" class="num">9</button></td>
+            <td></td>
+            <td><button onclick="clearDisplay()">C</button></td>
+            <td><button onclick="backspace()">B</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="addToDisplay(4)" class="num">4</button></td>
+            <td><button onclick="addToDisplay(5)" class="num">5</button></td>
+            <td><button onclick="addToDisplay(6)" class="num">6</button></td>
+            <td></td>
+            <td><button onclick="addToDisplay('*')">*</button></td>
+            <td><button onclick="addToDisplay('/')">/</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="addToDisplay(1)" class="num">1</button></td>
+            <td><button onclick="addToDisplay(2)" class="num">2</button></td>
+            <td><button onclick="addToDisplay(3)" class="num">3</button></td>
+            <td></td>
+            <td><button onclick="addToDisplay('+')">+</button></td>
+            <td><button onclick="addToDisplay('-')">-</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="addToDisplay('(')">(</button></td>
+            <td><button onclick="addToDisplay(0)" class="num">0</button></td>
+            <td><button onclick="addToDisplay(')')">)</button></td>
+            <td></td>
+            <td><button onclick="addToDisplay('.')">.</button></td>
+            <td><button onclick="calculateResult()">=</button></td>
+        </tr>
+    </table>
+    <p id="hi"></p>
+    <p id="hi1"></p>
+    <div id="footer">By: Jeevani Anumandla, Hyderabad</div>
+</body>
+</html>

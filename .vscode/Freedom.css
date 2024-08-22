@@ -1,0 +1,70 @@
+/* Freedom For Palestine For Ever */
+* {
+  font-family: "Cairo", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+  height: 100vh;
+}
+
+.palestine {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url("https://d33wubrfki0l68.cloudfront.net/img/b4aa3a46d2ff72c4f340da7bb949a6925a35f0a3/alhayat.jpg");
+  width: 120%;
+  height: 120%;
+  background-size: cover;
+  background-position: bottom;
+}
+
+.logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+
+.logo h1 {
+  font-size: 5vmax;
+  line-height: 1;
+}
+
+.logo h1 span {
+  font-size: 10vmax;
+  background: -webkit-linear-gradient(transparent, transparent),
+      url("https://d33wubrfki0l68.cloudfront.net/0bf298e92a939f83dcc1dc20712ac19ca6f41b2c/5c2e7/img/flag_of_palestine.svg");
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -ms-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-repeat: no-repeat;
+  -webkit-background-size: 1280px 863px;
+  -moz-background-size: 1280px 863px;
+  -ms-background-size: 1280px 863px;
+  background-size: 1280px 863px;
+  animation: positionBackground 20s infinite linear;
+}
+
+@keyframes positionBackground {
+  0%,
+  100% {
+      background-position: 0 0%;
+  }
+  50% {
+      background-position: 0 100%;
+  }
+}
+
+/* Freedom For Palestine For Ever */

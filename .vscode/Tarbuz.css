@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    min-width: 100vw;
+    min-height: 100vh;
+    background-image: radial-gradient(circle at 0 0, #f30, #0000 50vmax), radial-gradient(circle at 100% 100%, #380, #000 50vmax);
+    filter: contrast(3);
+  }
+  
+  canvas { display: block; }
+  
+  #mainCanvas {
+    width: 100%;
+    height: 100%;
+  }
+  
+  #arrowCanvas  {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 150px;
+    height: 150px;
+    z-index: 100;
+  }
+  
+  select { width: 170px; }
